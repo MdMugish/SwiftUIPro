@@ -20,7 +20,7 @@ public struct CustomButton: View {
     public var verticalPadding: CGFloat
     public var cornerRadius: CGFloat
     public var shadow : (x: CGFloat, y: CGFloat, color: ShadowColor, opacity: Double, radius: CGFloat)
-    var action: () -> Void
+    public var action: () -> Void
     
     public init(text: String, textAlignment: TextAlignment, foregroundColor: FontColor, backgroundColor: ButtonBackgroundColor, fontStyle: MyFonts, fontSize: CGFloat, horizontalPadding: CGFloat, verticalPadding: CGFloat, cornerRadius: CGFloat, shadow: (x: CGFloat, y: CGFloat, color: ShadowColor, opacity: Double, radius: CGFloat), action: @escaping () -> Void) {
         self.text = text

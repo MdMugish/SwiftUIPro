@@ -9,21 +9,21 @@ import Foundation
 import SwiftUI
 
 
-enum ButtonBackgroundColor: String {
+public enum ButtonBackgroundColor: String {
     case red = "#4545454"
     case blue = "#000000"
 }
 
-enum ShadowColor: String {
+public enum ShadowColor: String {
     case black = "#000000"
 }
 
-enum FontColor: String {
+public enum FontColor: String {
     case black = "#000000"
     case white = "#FFFFFF"
 }
 
-enum MyFonts: String {
+public enum MyFonts: String {
     case poppinsLight = "Poppins-Light"
     case poppinsRegular = "Poppins-Regular"
     case poppinsSemibold = "Poppins-SemiBold"
