@@ -7,19 +7,36 @@
 
 import SwiftUI
 
-struct CustomButton: View {
-    var text: String
-    var textAlignment: TextAlignment
-    var foregroundColor: FontColor
-    var backgroundColor: ButtonBackgroundColor
-    var fontStyle: MyFonts
-    var fontSize: CGFloat
-    var horizontalPadding: CGFloat
-    var verticalPadding: CGFloat
-    var cornerRadius: CGFloat
-    var shadow : (x: CGFloat, y: CGFloat, color: ShadowColor, opacity: Double, radius: CGFloat)
+public struct CustomButton: View {
+ 
+    
+    public var text: String
+    public var textAlignment: TextAlignment
+    public var foregroundColor: FontColor
+    public var backgroundColor: ButtonBackgroundColor
+    public var fontStyle: MyFonts
+    public var fontSize: CGFloat
+    public var horizontalPadding: CGFloat
+    public var verticalPadding: CGFloat
+    public var cornerRadius: CGFloat
+    public var shadow : (x: CGFloat, y: CGFloat, color: ShadowColor, opacity: Double, radius: CGFloat)
     var action: () -> Void
-    var body: some View {
+    
+    public init(text: String, textAlignment: TextAlignment, foregroundColor: FontColor, backgroundColor: ButtonBackgroundColor, fontStyle: MyFonts, fontSize: CGFloat, horizontalPadding: CGFloat, verticalPadding: CGFloat, cornerRadius: CGFloat, shadow: (x: CGFloat, y: CGFloat, color: ShadowColor, opacity: Double, radius: CGFloat), action: @escaping () -> Void) {
+        self.text = text
+        self.textAlignment = textAlignment
+        self.foregroundColor = foregroundColor
+        self.backgroundColor = backgroundColor
+        self.fontStyle = fontStyle
+        self.fontSize = fontSize
+        self.horizontalPadding = horizontalPadding
+        self.verticalPadding = verticalPadding
+        self.cornerRadius = cornerRadius
+        self.shadow = shadow
+        self.action = action
+    }
+    
+    public var body: some View {
         Button(action: {
             action()
         }) {

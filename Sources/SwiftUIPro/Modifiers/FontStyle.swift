@@ -7,12 +7,20 @@
 
 import SwiftUI
 
-struct FontStyle: ViewModifier {
+public struct FontStyle: ViewModifier {
+    
+    
     var name: MyFonts
     var color: FontColor
     var size: CGFloat
     
-    func body(content: Content) -> some View {
+    public init(name: MyFonts, color: FontColor, size: CGFloat) {
+        self.name = name
+        self.color = color
+        self.size = size
+    }
+    
+    public func body(content: Content) -> some View {
         content
             .foregroundColor(Color.init(hex: color.rawValue))
             .font(Font.custom(name.rawValue, size: size))
